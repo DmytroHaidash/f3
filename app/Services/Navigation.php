@@ -2,6 +2,7 @@
 
 namespace App\Services;
 
+use App\Models\Page;
 use Talanoff\ImpressionAdmin\Helpers\NavItem;
 
 class Delimiter
@@ -14,13 +15,13 @@ class Navigation
     private $exhibits;
 
     private $publications;
-
+    private $book;
     public function __construct()
     {
         $this->exhibits = app('sections')->filter(function ($section) {
             return $section->type == 'exhibit';
         });
-
+        $this->book = Page::where('slug', 'book')->first();
 //        $this->publications = app('sections')->filter(function($section) {
 //            return $section->type == 'publication';
 //        });
@@ -28,6 +29,7 @@ class Navigation
 
     public function header()
     {
+
         return [
             (object) [
                 'name' => __('nav.about'),
@@ -49,7 +51,8 @@ class Navigation
 //            ],
             (object) [
                 'name' => __('nav.book'),
-                'link' => url('/book')
+                'link' => url('/book'),
+                'published' => $this->book->published
             ],
             (object) [
                 'name' => __('nav.references'),
@@ -91,10 +94,13 @@ class Navigation
                         'name' => __('nav.contacts'),
                         'link' => route('client.contacts.index')
                     ],
+
                     (object) [
                         'name' => __('nav.book'),
-                        'link' => url('/book')
+                        'link' => url('/book'),
+                        'published' => $this->book->published
                     ],
+
                 ]
             ],
         ];

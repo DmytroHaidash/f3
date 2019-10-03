@@ -10,6 +10,7 @@
     <nav class="px-6 flex-1">
         <ul class="nav list-reset -mx-4">
             @foreach(app('nav')->header() as $nav)
+                @if(!isset($nav->published)|| ($nav->published && ( $nav->published == 1)) )
                 <li class="nav-item px-4">
                     <a href="{{ $nav->link ?? '#' }}" class="font-bold uppercase tracking-widest">
                         {{ $nav->name }}
@@ -38,6 +39,7 @@
                         </div>
                     @endif
                 </li>
+                @endif
             @endforeach
         </ul>
     </nav>

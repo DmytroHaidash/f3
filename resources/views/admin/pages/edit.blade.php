@@ -47,6 +47,12 @@
                         @endif
                         --}}
                     </block-editor>
+                    <div class="ml-3">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="published" name="published" {{ $page->published ? 'checked' : '' }}>
+                            <label class="custom-control-label" for="published">Опубликовать</label>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="col-lg-4">

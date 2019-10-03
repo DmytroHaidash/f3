@@ -53,7 +53,8 @@ class Page extends Model implements HasMedia
         'slug',
         'title',
         'body',
-        'parent_id'
+        'parent_id',
+        'published',
     ];
 
     public $translatable = [

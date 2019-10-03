@@ -39,7 +39,7 @@ class PagesController extends Controller
     {
         $page = new Page($request->only('parent_id'));
         $page->makeTranslation(['title', 'body'])->save();
-
+        $page->update(['published' , $request->has('published')]);
         if ($request->hasFile('cover')) {
             $page->addMediaFromRequest('cover')
                 ->usingFileName(makeFileName($request->file('cover')))

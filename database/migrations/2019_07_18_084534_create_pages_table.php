@@ -19,6 +19,7 @@ class CreatePagesTable extends Migration
             $table->json('title');
             $table->json('body')->nullable();
             $table->unsignedBigInteger('parent_id')->nullable();
+            $table->boolean('published')->default('1');
             $table->timestamps();
 
             $table->foreign('parent_id')->references('id')->on('pages')->onDelete('set null');
