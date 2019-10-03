@@ -15,11 +15,10 @@
         </h2>
 
         @if ($section->children->count())
-            <div class="flex flex-wrap">
-
+            <div class="flex flex-wrap justify-center">
                 @foreach($section->children as $child)
-                    @if((request()->route()->getName() == 'client.index') && $loop->index < 4 )
-                        <div class="teaser-wrapper w-full lg:flex-1">
+                    @if((request()->route()->getName() == 'client.index') && $loop->index < 3 )
+                        <div class="teaser-wrapper w-full lg:flex-1 mb-6">
                             <article class="teaser section-teaser">
                                 <figure class="lozad teaser__thumbnail"
                                         data-background-image="{{ $child->getBanner() }}"></figure>
@@ -41,7 +40,7 @@
                             </article>
                         </div>
                     @elseif(request()->route()->getName() != 'client.index')
-                        <div class="teaser-wrapper w-full lg:flex-1">
+                        <div class="teaser-wrapper w-full lg:w-1/3 mb-6">
                             <article class="teaser section-teaser">
                                 <figure class="lozad teaser__thumbnail"
                                         data-background-image="{{ $child->getBanner() }}"></figure>

@@ -28,7 +28,7 @@
 --}}
         <div class="search">
             <a href="#" data-show-search>
-                <svg width="24" height="24" class="fill-current">
+                <svg width="30" height="30" class="fill-current">
                     <use xlink:href="#search"></use>
                 </svg>
             </a>
