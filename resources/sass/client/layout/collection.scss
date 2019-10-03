@@ -1,5 +1,10 @@
+.teaser-wrapper {
+  padding: 0 15px;
+}
+
 .section-teaser {
   @extend .post-teaser;
+  height: 300px;
 
   .teaser__title {
     @apply uppercase tracking-widest font-bold text-center;

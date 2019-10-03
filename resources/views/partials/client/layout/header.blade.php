@@ -1,48 +1,11 @@
 <header class="app-header">
-    <div class="logo self-start w-40">
+    <div class="logo self-start w-40 z-20">
         <a href="{{ url('/') }}" class="block">
             <svg fill="#fff" width="160" height="82">
                 <use xlink:href="#logo"></use>
             </svg>
         </a>
     </div>
-
-    <nav class="px-6 flex-1">
-        <ul class="nav list-reset -mx-4">
-            @foreach(app('nav')->header() as $nav)
-                @if(!isset($nav->published)|| ($nav->published && ( $nav->published == 1)) )
-                <li class="nav-item px-4">
-                    <a href="{{ $nav->link ?? '#' }}" class="font-bold uppercase tracking-widest">
-                        {{ $nav->name }}
-                    </a>
-
-                    @if (isset($nav->children) && count($nav->children))
-                        <svg width="12" height="11" class="fill-current ml-2 -mt-px">
-                            <use xlink:href="#caret"></use>
-                        </svg>
-
-                        <div class="submenu leading-tight" style="display: none">
-                            <ul class="list-reset">
-                                @foreach($nav->children as $child)
-                                    @if (!$loop->first && $child->is_parent)
-                                        <li class="my-3">
-                                            <hr class="border-b border-white opacity-25">
-                                        </li>
-                                    @endif
-                                    <li class="my-1 {{ $child->is_parent ? 'font-bold' : '' }}">
-                                        <a href="{{ $child->link }}">
-                                            {{ $child->name }}
-                                        </a>
-                                    </li>
-                                @endforeach
-                            </ul>
-                        </div>
-                    @endif
-                </li>
-                @endif
-            @endforeach
-        </ul>
-    </nav>
 
     <div class="w-40 flex items-center">
         {{--<div class="language-switcher px-3 ml-auto">
@@ -70,6 +33,12 @@
                 </svg>
             </a>
         </div>
+
+        <div class="burger-menu">
+            <div class="line line--top"></div>
+            <div class="line line--middle"></div>
+            <div class="line line--bottom"></div>
+        </div>
     </div>
 
     <form action="{{ route('client.search.index') }}" method="post"
@@ -87,4 +56,41 @@
             </svg>
         </button>
     </form>
+
+    <nav class="menu">
+        <ul class="nav list-reset -mx-4">
+            @foreach(app('nav')->header() as $nav)
+                @if(!isset($nav->published)|| ($nav->published && ( $nav->published == 1)) )
+                    <li class="nav-item px-4">
+                        <a href="{{ $nav->link ?? '#' }}" class="font-bold uppercase tracking-widest">
+                            {{ $nav->name }}
+                        </a>
+
+                        @if (isset($nav->children) && count($nav->children))
+                            <svg width="12" height="11" class="fill-current ml-2 -mt-px">
+                                <use xlink:href="#caret"></use>
+                            </svg>
+
+                            <div class="submenu leading-tight" style="display: none">
+                                <ul class="list-reset">
+                                    @foreach($nav->children as $child)
+                                        @if (!$loop->first && $child->is_parent)
+                                            <li class="my-3">
+                                                <hr class="border-b border-white opacity-25">
+                                            </li>
+                                        @endif
+                                        <li class="my-1 {{ $child->is_parent ? 'font-bold' : '' }}">
+                                            <a href="{{ $child->link }}">
+                                                {{ $child->name }}
+                                            </a>
+                                        </li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
+                    </li>
+                @endif
+            @endforeach
+        </ul>
+    </nav>
 </header>

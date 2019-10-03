@@ -6,7 +6,7 @@
 
     <section class="mt-32 mb-12">
         <div class="container">
-            <h1 class="text-3xl leading-none mb-8 title--decorated font-heading text-center">
+            <h1 class="text-3xl leading-none mb-8 font-heading text-center">
                 <span>{{ __('nav.blog') }}</span>
 
                 <div class="title-decoration inset-x-0 mx-auto w-40">

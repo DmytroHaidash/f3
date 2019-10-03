@@ -46,4 +46,5 @@ Route::group([
         ->where('page', '(about|book)');
 
     Route::get('references', 'BlogController@references')->name('references');
+    Route::get('swordsmith', 'CollectionsController@swordsmith')->name('swordsmith');
 });

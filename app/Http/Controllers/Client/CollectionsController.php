@@ -26,7 +26,13 @@ class CollectionsController extends Controller
 
         return view('client.collection.section', compact('exhibits', 'section'));
     }
-
+    public function swordsmith(): View
+    {
+        $sections =  app('sections')->filter(function ($section) {
+            return is_null($section->parent_id);
+        });
+        return view('client.collection.swordsmith', compact('sections'));
+    }
     /**
      * @param  Exhibit  $exhibit
      * @return View

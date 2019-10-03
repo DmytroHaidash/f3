@@ -3,7 +3,7 @@
 @section('content')
 
     <section class="mt-32 mb-12 container text-center">
-        <h1 class="text-5xl font-thin leading-none mb-12 title--decorated font-heading">
+        <h1 class="text-5xl font-thin leading-none mb-12 font-heading">
             <span>{{ __('nav.exhibitions') }}</span>
 
             <div class="title-decoration inset-x-0 mx-auto w-40">

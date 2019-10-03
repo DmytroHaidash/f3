@@ -23,4 +23,11 @@ require('./modules/masonry');
     localStorage.setItem('intro', 'false');
   });
 
+  let menu  = $('.menu');
+  let burgerMenu  = $('.burger-menu');
+    burgerMenu.on('click', function () {
+    $(this).toggleClass('active');
+    menu.toggleClass('active');
+  })
+
 })(jQuery);

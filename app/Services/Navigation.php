@@ -37,10 +37,7 @@ class Navigation
             ],
             (object) [
                 'name' => __('nav.collection'),
-                'link' => null,
-                'children' => $this->exhibits->map(function ($item) {
-                    return $this->handleChild($item);
-                })
+                'link' => route('client.swordsmith')
             ],
 //            (object) [
 //                'name' => __('nav.publications'),
@@ -115,7 +112,7 @@ class Navigation
                 'link' => route('client.collection.index', $section->slug),
                 'children' => $this->exhibits->filter(function ($child) use ($section) {
                     return $child->parent_id == $section->id;
-                })->map(function($child) use ($section) {
+                })->take(5)->map(function($child) use ($section) {
                     return (object)[
                         'name' => $child->title,
                         'link' => route('client.collection.index', [$section->slug, $child->slug])

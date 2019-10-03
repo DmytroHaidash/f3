@@ -8,7 +8,7 @@
             </a>
         </div>
 
-        <div class="mt-8 flex flex-wrap justify-center -mx-8">
+        <div class="mt-8 flex flex-wrap justify-center -mx-8 max-w-full">
             @foreach(app('nav')->footer() as $footer_el)
 
 
