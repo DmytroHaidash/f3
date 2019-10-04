@@ -1,9 +1,9 @@
 <section class="slideshow">
     <div class="max-w-lg text-white z-30" id="intro" style="display: none">
-        <img src="{{ asset('images/feldman.png') }}" alt="">
+        <img src="{{ asset('images/img.jpg') }}" alt="">
 
-        <a href="{{ url('/alexandr-feldman') }}">
-            <h1 class="text-4xl leading-none mb-4">{{ __('nav.about') }}</h1>
+        <a href="{{ url('/book') }}">
+            <h1 class="text-4xl leading-none mb-4">{{ __('nav.book') }}</h1>
             <blockquote class="font-serif italic text-xl leading-tight">{{ __('common.intro.quote') }}</blockquote>
         </a>
 
