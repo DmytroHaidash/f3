@@ -20,5 +20,8 @@ return [
     'not_found' => [
         'message' => 'Nothing found...',
         'home' => 'Back to home'
+    ],
+    'home' => [
+        'all' => 'See all'
     ]
 ];

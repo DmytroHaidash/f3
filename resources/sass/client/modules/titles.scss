@@ -4,6 +4,7 @@
     top: 50%;
     z-index: -1;
     transform: translateY(-50%);
+    background-color: darken(#3c3f41,  5%);
   }
 
   &--decorated {

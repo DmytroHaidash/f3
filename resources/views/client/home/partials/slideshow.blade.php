@@ -4,7 +4,7 @@
 
         <a href="{{ url('/book') }}">
             <h1 class="text-4xl leading-none mb-4">{{ __('nav.book') }}</h1>
-            <blockquote class="font-serif italic text-xl leading-tight">{{ __('common.intro.quote') }}</blockquote>
+           {{-- <blockquote class="font-serif italic text-xl leading-tight">{{ __('common.intro.quote') }}</blockquote>--}}
         </a>
 
         <svg width="20" height="20" fill="#fff" class="close cursor-pointer absolute top-0 right-0 m-4">
@@ -14,7 +14,7 @@
 
     <div class="slides slides--images">
         <div class="slide slide--current">
-            <figure class="slide__img" style="background-image: url({{ asset('images/img.jpg') }});"></figure>
+            <figure class="slide__img" style="background-image: url({{ asset('images/1.jpg') }});"></figure>
             <div class="slide__title">
                 <svg fill="#fff" class="slide__title-logo">
                     <use xlink:href="#logo"></use>
@@ -22,6 +22,16 @@
             </div>
             <div class="slide__desc" hidden></div>
             <div class="slide__link" hidden></div>
+        </div>
+        <div class="slide slide--current">
+            <figure class="slide__img" style="background-image: url({{ asset('images/img.jpg') }});"></figure>
+            <h2 class="slide__title font-heading">{{ __('nav.book') }}</h2>
+            <div class="slide__desc" hidden></div>
+            <div class="slide__link" >
+                <a href="{{ url('/book') }}" class="button button--primary">
+                    {{ __('nav.book') }}
+                </a>
+            </div>
         </div>
         @foreach($sections as $section)
             <div class="slide">

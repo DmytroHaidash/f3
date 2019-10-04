@@ -3,15 +3,7 @@
         <h2 class="text-center text-3xl my-12 relative z-20 relative font-heading">
             <span>{{ $section->title }}</span>
 
-            <div class="title-decoration inset-x-0 mx-auto w-40">
-                @foreach(range(1, 5) as $row)
-                    <div class="w-full flex justify-center my-2" style="opacity: {{ 1.2 - $loop->iteration * 0.2 }}">
-                        @foreach(range(0, rand(6, 12)) as $col)
-                            <div class="w-1 h-1 bg-{{ $section->color }}-500 mx-1 rounded-full"></div>
-                        @endforeach
-                    </div>
-                @endforeach
-            </div>
+            <div class="title-decoration inset-x-0 mx-auto w-40 h-16"></div>
         </h2>
 
         @if ($section->children->count())
@@ -62,7 +54,14 @@
                             </article>
                         </div>
                     @endif
+
                 @endforeach
+                @if(request()->route()->getName() == 'client.index')
+                    <div class="container text-center mt-8">
+                        <a href="{{ route('client.swordsmith') }}"
+                           class="button button--primary">{{ __('pages.home.all') }}</a>
+                    </div>
+                @endif
             </div>
         @endif
     @endforeach
