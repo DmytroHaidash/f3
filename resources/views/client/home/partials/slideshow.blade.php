@@ -4,7 +4,7 @@
 
         <a href="{{ url('/book') }}">
             <h1 class="text-4xl leading-none mb-4">{{ __('nav.book') }}</h1>
-           {{-- <blockquote class="font-serif italic text-xl leading-tight">{{ __('common.intro.quote') }}</blockquote>--}}
+            <blockquote class="font-serif italic text-xl leading-tight">{{ __('common.intro.quote') }}</blockquote>
         </a>
 
         <svg width="20" height="20" fill="#fff" class="close cursor-pointer absolute top-0 right-0 m-4">

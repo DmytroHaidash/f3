@@ -2,7 +2,7 @@
 
 return [
     'intro' => [
-        'quote' => 'We decided that if such a collection is in storerooms, it is unlikely to bring any benefit, especially in today\'s difficult times.'
+        'quote' => 'Nothing is as good as having a sword in hand, but if that is not possible, this book is a close second.'
     ],
     'header' => [
         'search' => 'Search'
