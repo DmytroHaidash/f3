@@ -23,7 +23,7 @@
             <div class="slide__desc" hidden></div>
             <div class="slide__link" hidden></div>
         </div>
-        <div class="slide slide--current">
+        <div class="slide">
             <figure class="slide__img" style="background-image: url({{ asset('images/img.jpg') }});"></figure>
             <h2 class="slide__title font-heading">{{ __('nav.book') }}</h2>
             <div class="slide__desc" hidden></div>
