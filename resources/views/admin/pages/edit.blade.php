@@ -47,9 +47,16 @@
                         @endif
                         --}}
                     </block-editor>
-                    <div class="ml-3">
+                    @if($page->slug == 'book')
+                        <label for="video" class="mt-2">Видео</label>
+                        <input id="video" type="text" name="video"
+                               class="form-control"
+                               value="{{ old('video') ?? $page->video }}">
+                    @endif
+                    <div class="ml-3 mt-2">
                         <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" id="published" name="published" {{ $page->published ? 'checked' : '' }}>
+                            <input type="checkbox" class="custom-control-input" id="published"
+                                   name="published" {{ $page->published ? 'checked' : '' }}>
                             <label class="custom-control-label" for="published">Опубликовать</label>
                         </div>
                     </div>
@@ -60,6 +67,12 @@
                                      src="{{ optional($page->getFirstMedia('cover'))->getFullUrl('thumb') }}"></single-uploader>
                 </div>
             </div>
+            @if($page->slug == 'book')
+                <div class="mt-4">
+                    <multi-uploader
+                            :src="{{ json_encode(\App\Http\Resources\MediaResource::collection($page->getMedia('uploads'))) }}"></multi-uploader>
+                </div>
+            @endif
 
             <div class="mt-4">
                 <button class="btn btn-primary">Сохранить</button>

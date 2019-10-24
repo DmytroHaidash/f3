@@ -43,8 +43,9 @@ Route::group([
         ->where('locale', '('.implode('|', config('app.locales')).')');
 
     Route::get('{page}/{subpage?}', 'PagesController@show')
-        ->where('page', '(about|book)');
-
+        ->where('page', '(about)');
+    Route::get('book', 'PagesController@book')->name('book');
     Route::get('references', 'BlogController@references')->name('references');
     Route::get('swordsmith', 'CollectionsController@swordsmith')->name('swordsmith');
+    Route::post('/order', 'PagesController@order')->name('order');
 });

@@ -180,8 +180,10 @@ class Slideshow {
 }
 
 if (slideshow) {
+  if(window.innerWidth > 990){
   const slides = new Slideshow(slideshow);
 
   const auto = setInterval(() => slides.navigate(), 4000);
   $('.slidenav__item--next, .slidenav__item--prev').on('click', () => clearInterval(auto));
+  }
 }

@@ -39,7 +39,7 @@ class CollectionsController extends Controller
      */
     public function show(Exhibit $exhibit): View
     {
-        $props = array_merge(array_flip(array_keys(trans('exhibits.props'))), $exhibit->props);
+        $props = $exhibit->props;
 
         return view('client.collection.show', compact('exhibit', 'props'));
     }

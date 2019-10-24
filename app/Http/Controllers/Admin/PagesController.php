@@ -8,6 +8,7 @@ use App\Models\Page;
 use Exception;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
+use Spatie\MediaLibrary\Models\Media;
 
 class PagesController extends Controller
 {
@@ -69,13 +70,14 @@ class PagesController extends Controller
     {
         $page->fill($request->only('parent_id'));
         $page->makeTranslation(['title', 'body'])->save();
-        $page->update(['published' => $request->has('published')]);
+        $page->update(['published' => $request->has('published'), 'video' => $request->input('video')]);
         if ($request->hasFile('cover')) {
             $page->clearMediaCollection('cover');
             $page->addMediaFromRequest('cover')
                 ->usingFileName(makeFileName($request->file('cover')))
                 ->toMediaCollection('cover');
         }
+        $this->handleMedia($request, $page);
 
         return back();
     }
@@ -94,5 +96,23 @@ class PagesController extends Controller
         $page->delete();
 
         return back();
+    }
+
+    private function handleMedia(PageSavingRequest $request, Page $page): void
+    {
+        if ($request->filled('uploads')) {
+            foreach ($request->input('uploads') as $media) {
+                Media::find($media)->update([
+                    'model_type' => Page::class,
+                    'model_id' => $page->id
+                ]);
+            }
+
+            Media::setNewOrder($request->input('uploads'));
+        }
+
+        if ($request->filled('deletion')) {
+            Media::whereIn('id', $request->input('deletion'))->delete();
+        }
     }
 }

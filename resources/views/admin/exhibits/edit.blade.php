@@ -25,7 +25,7 @@
                                 <div class="row">
                                     @foreach(\App\Models\Exhibit::$props as $prop)
                                         <div class="col-md-6 form-group">
-                                            <label>{{ __('exhibits.props.'.$prop) }}</label>
+                                            <label>{{ $prop }}</label>
                                             <input type="text" class="form-control" name="{{$lang}}[props][{{$prop}}]"
                                                    value="{{ old($lang.'.props.'.$prop) ?? $exhibit->getTranslation('props', $lang)[$prop] }}">
                                         </div>

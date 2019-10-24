@@ -7,7 +7,7 @@
         </a>
     </div>
 
-    <div class="w-40 flex items-center">
+    <div class="w-20 flex items-center">
         {{--<div class="language-switcher px-3 ml-auto">
             {{ app()->getLocale() }}
 
@@ -42,13 +42,13 @@
     </div>
 
     <form action="{{ route('client.search.index') }}" method="post"
-          class="search-panel absolute inset-x-0 top-0 flex items-center p-4 bg-gray-900"
+          class="search-panel absolute inset-x-0 top-0 flex items-center p-4 bg-gray-900 z-50"
           style="display: none">
         @csrf
 
         <input type="search" name="search" class="form-control text-lg h-12" autocomplete="nope"
                placeholder="{{ __('common.header.search') }}"
-               value="{{ old('search') ?? $query ?? null }}">
+               value="{{ old('search') ?? $query ?? null }}" required>
 
         <button class="button button--primary h-12">
             <svg width="24" height="24" class="fill-current">

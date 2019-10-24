@@ -23,5 +23,12 @@ return [
     ],
     'home' => [
         'all' => 'See all'
+    ],
+    'book' => [
+        'btn' => 'Buy a book',
+        'name' => 'Your name',
+        'contact' => 'E-mail',
+        'message' => 'Question?',
+        'buy' => 'Buy',
     ]
 ];

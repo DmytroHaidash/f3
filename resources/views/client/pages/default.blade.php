@@ -20,6 +20,8 @@
         <div class="page-content mt-8">
             {!! $page->body !!}
         </div>
+
+
     </section>
 
 @endsection

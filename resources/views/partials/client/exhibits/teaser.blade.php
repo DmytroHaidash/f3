@@ -12,11 +12,14 @@
                 @endif
             </div>
 
-            <div class="flex -mx-2 mt-3 font-sm">
-                <div class="px-2 w-1/3">{{ $exhibit->props['number'] }}</div>
+            {{--<div class="flex -mx-2 mt-3 font-sm">
+                @foreach($exhibit->props as $props)
+                    <div class="px-2 w-1/8">{{ $props }}</div>
+                @endforeach
+                --}}{{--<div class="px-2 w-1/3">{{ $exhibit->props['Number'] }}</div>
                 <div class="px-2 w-1/3">{{ $exhibit->props['origin'] }}</div>
-                <div class="px-2 w-1/3">{{ $exhibit->props['time'] }}</div>
-            </div>
+                <div class="px-2 w-1/3">{{ $exhibit->props['time'] }}</div>--}}{{--
+            </div>--}}
         </div>
     </a>
 </article>

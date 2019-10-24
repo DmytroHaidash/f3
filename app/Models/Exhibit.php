@@ -59,12 +59,14 @@ class Exhibit extends Model implements HasMedia, Sortable
     use HasTranslations, SluggableTrait, TranslatableTrait, MediaTrait, SortableTrait;
 
     public static $props = [
-        'number',
-        'origin',
-        'time',
-        'technique',
-        'material',
-        'dimensions'
+        'Number',
+        'Smith Name',
+        'Active Period',
+        'School',
+        'Province',
+        'Mei',
+        'Rating',
+        'Nagasa'
     ];
 
     public $translatable = [

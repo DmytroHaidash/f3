@@ -1,5 +1,5 @@
 .button {
-  @apply px-6 py-3 inline-flex items-center uppercase tracking-widest text-xs font-bold border;
+  @apply px-6 py-3 inline-flex items-center uppercase tracking-widest text-base font-bold border;
 
   &--primary {
     @apply bg-purple-900 border-purple-900 text-white;

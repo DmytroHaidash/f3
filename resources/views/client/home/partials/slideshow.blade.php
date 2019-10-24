@@ -14,7 +14,7 @@
 
     <div class="slides slides--images">
         <div class="slide slide--current">
-            <figure class="slide__img" style="background-image: url({{ asset('images/1.jpg') }});"></figure>
+            <figure class="slide__img" style="background-image: url({{ asset('images/banner_main.jpg') }});"></figure>
             <div class="slide__title">
                 <svg fill="#fff" class="slide__title-logo">
                     <use xlink:href="#logo"></use>
@@ -27,8 +27,8 @@
             <figure class="slide__img" style="background-image: url({{ asset('images/img.jpg') }});"></figure>
             <h2 class="slide__title font-heading">{{ __('nav.book') }}</h2>
             <div class="slide__desc" hidden></div>
-            <div class="slide__link" >
-                <a href="{{ url('/book') }}" class="button button--primary">
+            <div class="slide__link">
+                <a href="{{ route('client.book') }}" class="button button--primary">
                     {{ __('nav.book') }}
                 </a>
             </div>
@@ -50,7 +50,7 @@
         @endforeach
     </div>
 
-    <nav class="slidenav text-white">
+    <nav class="slidenav text-white hidden lg:block">
         <button class="slidenav__item slidenav__item--prev">{{ __('nav.previous') }}</button>
         <span>/</span>
         <button class="slidenav__item slidenav__item--next">{{ __('nav.next') }}</button>

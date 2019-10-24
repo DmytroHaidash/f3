@@ -48,7 +48,7 @@ class Navigation
 //            ],
             (object) [
                 'name' => __('nav.book'),
-                'link' => url('/book'),
+                'link' => route('client.book'),
                 'published' => $this->book->published
             ],
             (object) [
@@ -159,7 +159,7 @@ class Navigation
                 'icon' => 'i-bullet-list',
             ]),
             new Delimiter(),
-            new NavItem([
+           /* new NavItem([
                 'name' => 'Выставки',
                 'route' => 'exhibitions',
                 'icon' => 'i-calendar',
@@ -173,8 +173,8 @@ class Navigation
                 'name' => 'Места проведения',
                 'route' => 'places',
                 'icon' => 'i-flag',
-            ]),
-            new Delimiter(),
+            ]),*/
+            /*new Delimiter(),*/
             new NavItem([
                 'name' => 'Контакты',
                 'route' => 'contacts',

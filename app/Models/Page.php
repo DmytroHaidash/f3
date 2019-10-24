@@ -55,6 +55,7 @@ class Page extends Model implements HasMedia
         'body',
         'parent_id',
         'published',
+        'video'
     ];
 
     public $translatable = [

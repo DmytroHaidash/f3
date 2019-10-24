@@ -12,10 +12,10 @@
                 <h4 class="text-2xl mt-3 font-serif italic text-center">{{ $exhibit->author->name }}</h4>
             @endif
 
-            <div class="flex flex-wrap -mx-8 mt-12">
+            <div class="flex flex-wrap -mx-8 mt-12 justify-center">
                 @foreach($props as $prop => $name)
                     <div class="px-8 w-1/2 md:w-1/3 lg:w-1/6 mb-4">
-                        <p class="text-xs uppercase text-gray-500">{{ __('exhibits.props.'.$prop) }}</p>
+                        <p class="text-xs uppercase text-gray-500">{{ $prop }}</p>
                         <h4>{{ $name }}</h4>
                     </div>
                 @endforeach
