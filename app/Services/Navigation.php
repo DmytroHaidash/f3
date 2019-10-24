@@ -142,11 +142,11 @@ class Navigation
                 'route' => 'sections',
                 'icon' => 'i-structure',
             ]),
-            new NavItem([
+           /* new NavItem([
                 'name' => 'Авторы',
                 'route' => 'authors',
                 'icon' => 'i-users',
-            ]),
+            ]),*/
             new Delimiter(),
             new NavItem([
                 'name' => 'Пресс-центр',
