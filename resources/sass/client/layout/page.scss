@@ -20,7 +20,7 @@
 	}
 
 	&-content {
-		@apply max-w-3xl mx-auto;
+		@apply max-w-6xl mx-auto;
 
 		p {
 			@apply mb-4;
@@ -35,7 +35,7 @@
 }
 
 .video-feedback {
-	padding-top: 720/1200*100%;
+	padding-top: 800/1200*100%;
 	position: relative;
 	cursor: pointer;
 	overflow: hidden;

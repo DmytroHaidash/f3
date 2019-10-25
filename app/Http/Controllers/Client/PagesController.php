@@ -36,7 +36,7 @@ class PagesController extends Controller
     public function book()
     {
         $page = Page::where('slug', 'book')->first();
-        $description = explode('</p>', $page->body, '2' );
+        $description = explode('</p>', $page->body, '3' );
         return \view('client.pages.book', compact('page', 'description') );
     }
 }

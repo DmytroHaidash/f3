@@ -18,7 +18,7 @@
         </h1>
         @if($page->video)
             <div class="flex flex-wrap -mx-8 mt-12 justify-center">
-                <div class="w-1/6 md:w-1/3 lg:w-1/2 mb-4  mt-4">
+                <div class="w-full mb-4  mt-4">
                     <div class="video-feedback" data-youtube="{{$page->video}}"></div>
                 </div>
             </div>
@@ -29,10 +29,11 @@
             </button>
         </div>
 
-        <div class="page-content mt-8">
+        <div class="page-content mt-8 text-2xl">
             {!! $description[0] !!}
+            {!! $description[1] !!}
             <div class="page-content-item mb-4">
-                {!! $description[1] !!}
+                {!! $description[2] !!}
             </div>
         </div>
         <div class="flex flex-wrap -mx-8  mb-4 justify-center">
@@ -40,8 +41,8 @@
         </div>
 
 
-        <div class="flex flex-wrap -mx-8 mt-12 justify-center">
-            <div class="page-content mt-8">
+        <div class="flex flex-wrap -mx-8 mt-12 justify-center ">
+            <div class="page-content mt-8 text-2xl">
                 <h2 class="mb-4 text-center">Book review </h2>
                 <h4 class="mb-2 mt-4 text-center">Kirill Rivkin (San Jose CA, USA)</h4>
                 <p>Very impressive!</p>
