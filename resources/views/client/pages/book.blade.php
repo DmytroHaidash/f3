@@ -28,6 +28,7 @@
                 @lang('pages.book.btn')
             </button>
         </div>
+        @dd($description)
         <div class="page-content mt-8">
             {!! $description[0] !!}
             <div class="page-content-item mb-4">
