@@ -30,7 +30,7 @@ class Order extends Mailable
     public function build()
     {
         return $this
-            ->to('far4ik1991@gmail.com')
+            ->to('mr.nihonto@mail.ru')
             ->subject('Связаться с нами')
             ->view('mail.order');
     }
