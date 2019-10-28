@@ -44,3 +44,9 @@ $('#open-review-three').on('click', function (e) {
   $('.review-three').slideToggle();
   $(this).hasClass('is-active') ? $(this).text('Close') : $(this).text('Read more');
 });
+$('#open-review-four').on('click', function (e) {
+  e.preventDefault();
+  $(this).toggleClass('is-active');
+  $('.review-four').slideToggle();
+  $(this).hasClass('is-active') ? $(this).text('Close') : $(this).text('Read more');
+});

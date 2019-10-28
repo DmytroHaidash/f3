@@ -171,6 +171,7 @@
                     of the world's foremost collections of the most highly coveted masterworks in the history of
                     Nihonto. In his book, Dmitry Pechalov affords us a view of his dedication as a collector, his
                     discernment as a connoisseur, and his unwaivering spirit as an author.</p>
+                <div class="review-four mb-5">
                 <p> This comprehensive collection of Soshu masterpieces is presented with detailed historic backgrounds,
                     and meticulous research gathered from an impressive array of historic records, contemporary
                     resources, and respected scholars. Furthermore, they are illustrated in superlative photographic
@@ -182,6 +183,10 @@
                     when it is shared with others in fellowship. Mr. Pechalov has made the consummate effort to share
                     his collection with us, and in doing so, enables us to share in the appreciation and enjoyment of
                     the resplendent Soshu tradition.</p>
+                </div>
+                <div class="flex flex-wrap -mx-8 -mt-2 mb-4 justify-center">
+                    <a href="#" id="open-review-four" class="text-blue-200 text-3xl">Read more</a>
+                </div>
             </div>
         </div>
         <div class="flex flex-wrap -mx-8 mt-12 justify-center">
