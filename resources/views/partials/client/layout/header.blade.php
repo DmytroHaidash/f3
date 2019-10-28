@@ -58,7 +58,7 @@
     </form>
 
     <nav class="menu">
-        <ul class="nav list-reset -mx-4">
+        <ul class="nav list-reset">
             @foreach(app('nav')->header() as $nav)
                 @if(!isset($nav->published)|| ($nav->published && ( $nav->published == 1)) )
                     <li class="nav-item px-4">

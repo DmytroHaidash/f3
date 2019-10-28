@@ -15,7 +15,7 @@ module.exports = {
   },
   theme: {
     fontFamily: {
-      sans: ['Darker Grotesque', 'sans-serif'],
+      sans: ['Open Sans', 'sans-serif'],
       serif: ['Cormorant', 'serif'],
       heading: ['Grenze', 'sans-serif']
     },
@@ -37,6 +37,10 @@ module.exports = {
         yellow: {
           '500': '#f52b2b',
         },
+
+        grey: {
+          '200': '#313131',
+        }
       },
     },
   },

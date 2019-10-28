@@ -43,7 +43,8 @@ class PostsController extends Controller
         /** @var Post $post */
         $post = (new Post())->fill([
             'published_at' => Carbon::parse($request->input('published_at')),
-            'published' => $request->has('published')
+            'published' => $request->has('published'),
+            'video' => $request->input('video')
         ]);
 
         $post->makeTranslation(['title', 'description', 'body'])->save();
@@ -79,7 +80,8 @@ class PostsController extends Controller
 
         $post->fill([
             'published_at' => Carbon::parse($request->input('published_at')),
-            'published' => $request->has('published')
+            'published' => $request->has('published'),
+            'video' => $request->input('video')
         ]);
 
         $post->makeTranslation(['title', 'description', 'body'])->save();

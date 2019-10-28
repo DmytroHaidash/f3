@@ -9,6 +9,7 @@ require('./modules/slideshow');
 require('./modules/masonry');
 require('./modules/youtube');
 
+
 (function ($) {
   require('./modules/teaser')($);
   require('./modules/toggle')($);
