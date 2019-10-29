@@ -8,31 +8,28 @@
             </a>
         </div>
 
-        <div class="mt-8 flex flex-wrap justify-center -mx-8 max-w-full">
+        <div class="mt-8 flex flex-wrap justify-center  max-w-full">
             @foreach(app('nav')->footer() as $footer_el)
-
-
-                    <div class="px-8 w-full md:w-1/2 lg:w-1/4 max-w-xs mb-8">
-                        <h5 class="font-bold mb-3 text-lg">
-                            @if ($footer_el->link)
-                                <a href="{{ $footer_el->link }}">{{ $footer_el->name }}</a>
-                            @else
-                                {{ $footer_el->name }}
-                            @endif
-                        </h5>
-                        @if ($footer_el->children)
-                            <ul class="list-reset">
-                                @foreach($footer_el->children as $child)
-                                    @if(!isset($child->published)|| ($child->published && ( $child->published == 1)))
+                <div class="px-8 w-full md:w-1/2 lg:w-1/4 max-w-xs mb-8">
+                    <h5 class="font-bold mb-3 text-lg">
+                        @if ($footer_el->link)
+                            <a href="{{ $footer_el->link }}">{{ $footer_el->name }}</a>
+                        @else
+                            {{ $footer_el->name }}
+                        @endif
+                    </h5>
+                    @if ($footer_el->children)
+                        <ul class="list-reset">
+                            @foreach($footer_el->children as $child)
+                                @if(!isset($child->published)|| ($child->published && ( $child->published == 1)))
                                     <li>
                                         <a href="{{ $child->link }}">{{ $child->name }}</a>
                                     </li>
-                                    @endif
-                                @endforeach
-                            </ul>
-                        @endif
-                    </div>
-
+                                @endif
+                            @endforeach
+                        </ul>
+                    @endif
+                </div>
             @endforeach
         </div>
 

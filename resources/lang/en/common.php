@@ -9,5 +9,6 @@ return [
     ],
     'footer' => [
         'info' => 'Information',
+        'school' => 'School\'s'
     ],
 ];

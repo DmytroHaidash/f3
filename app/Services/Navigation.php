@@ -3,6 +3,7 @@
 namespace App\Services;
 
 use App\Models\Page;
+use function foo\func;
 use Talanoff\ImpressionAdmin\Helpers\NavItem;
 
 class Delimiter
@@ -16,6 +17,7 @@ class Navigation
 
     private $publications;
     private $book;
+
     public function __construct()
     {
         $this->exhibits = app('sections')->filter(function ($section) {
@@ -31,11 +33,11 @@ class Navigation
     {
 
         return [
-            (object) [
+            (object)[
                 'name' => __('nav.about'),
                 'link' => url('/about')
             ],
-            (object) [
+            (object)[
                 'name' => __('nav.collection'),
                 'link' => route('client.swordsmith')
             ],
@@ -46,21 +48,21 @@ class Navigation
 //                        return $this->handleChild($item);
 //                    })
 //            ],
-            (object) [
+            (object)[
                 'name' => __('nav.book'),
                 'link' => route('client.book'),
                 'published' => $this->book->published
             ],
-            (object) [
+            (object)[
                 'name' => __('nav.references'),
                 'link' => route('client.references')
             ],
-            (object) [
+            (object)[
                 'name' => __('nav.blog'),
                 'link' => route('client.blog.index')
             ],
 
-            (object) [
+            (object)[
                 'name' => __('nav.contacts'),
                 'link' => route('client.contacts.index')
             ]
@@ -69,30 +71,34 @@ class Navigation
 
     public function footer()
     {
+        $sections = $this->exhibits->filter(function ($section) {
+            return !$section->parent_id;
+        });
+
         $items = [
-            (object) [
+            (object)[
                 'name' => __('common.footer.info'),
                 'link' => null,
                 'children' => [
-                    (object) [
+                    (object)[
                         'name' => __('nav.about'),
                         'link' => url('/about')
                     ],
-                    (object) [
+                    (object)[
                         'name' => __('nav.blog'),
                         'link' => route('client.blog.index')
                     ],
-                    /*(object) [
-                        'name' => __('nav.exhibitions'),
-                        'link' => route('client.exhibitions.index')
-                    ],*/
+                    (object)[
+                        'name' => __('nav.collection'),
+                        'link' => route('client.swordsmith')
+                    ],
 
-                    (object) [
+                    (object)[
                         'name' => __('nav.contacts'),
                         'link' => route('client.contacts.index')
                     ],
 
-                    (object) [
+                    (object)[
                         'name' => __('nav.book'),
                         'link' => url('/book'),
                         'published' => $this->book->published
@@ -100,26 +106,33 @@ class Navigation
 
                 ]
             ],
+            (object)[
+                'name' => __('common.footer.school'),
+                'link' => null,
+                'children' => $sections->map(function($section){
+                    return (object)[
+                        'name' => $section->title,
+                        'link' => route('client.collection.index', $section->slug)
+                    ];
+                })->toArray()
+            ],
         ];
 
-        $sections = $this->exhibits->filter(function ($section) {
-            return !$section->parent_id;
-        });
 
-        foreach ($sections as $section) {
-            array_push($items, (object) [
+        /*foreach ($sections as $section) {
+            array_push($items, (object)[
                 'name' => $section->title,
                 'link' => route('client.collection.index', $section->slug),
                 'children' => $this->exhibits->filter(function ($child) use ($section) {
                     return $child->parent_id == $section->id;
-                })->take(5)->map(function($child) use ($section) {
+                })->take(5)->map(function ($child) use ($section) {
                     return (object)[
                         'name' => $child->title,
                         'link' => route('client.collection.index', [$section->slug, $child->slug])
                     ];
                 })
             ]);
-        }
+        }*/
 
         return $items;
     }
@@ -142,11 +155,11 @@ class Navigation
                 'route' => 'sections',
                 'icon' => 'i-structure',
             ]),
-           /* new NavItem([
-                'name' => 'Авторы',
-                'route' => 'authors',
-                'icon' => 'i-users',
-            ]),*/
+            /* new NavItem([
+                 'name' => 'Авторы',
+                 'route' => 'authors',
+                 'icon' => 'i-users',
+             ]),*/
             new Delimiter(),
             new NavItem([
                 'name' => 'Пресс-центр',
@@ -159,21 +172,21 @@ class Navigation
                 'icon' => 'i-bullet-list',
             ]),
             new Delimiter(),
-           /* new NavItem([
-                'name' => 'Выставки',
-                'route' => 'exhibitions',
-                'icon' => 'i-calendar',
-            ]),
-            new NavItem([
-                'name' => 'Города',
-                'route' => 'cities',
-                'icon' => 'i-pin',
-            ]),
-            new NavItem([
-                'name' => 'Места проведения',
-                'route' => 'places',
-                'icon' => 'i-flag',
-            ]),*/
+            /* new NavItem([
+                 'name' => 'Выставки',
+                 'route' => 'exhibitions',
+                 'icon' => 'i-calendar',
+             ]),
+             new NavItem([
+                 'name' => 'Города',
+                 'route' => 'cities',
+                 'icon' => 'i-pin',
+             ]),
+             new NavItem([
+                 'name' => 'Места проведения',
+                 'route' => 'places',
+                 'icon' => 'i-flag',
+             ]),*/
             /*new Delimiter(),*/
             new NavItem([
                 'name' => 'Контакты',
@@ -200,7 +213,7 @@ class Navigation
             array_unshift($sections, $item->parent);
         }
 
-        return (object) [
+        return (object)[
             'name' => $item->title,
             'link' => route('client.collection.index', $sections),
             'is_parent' => is_null($item->parent_id)
