@@ -107,7 +107,7 @@ class Navigation
                 ]
             ],
             (object)[
-                'name' => __('common.footer.school'),
+                'name' => '',
                 'link' => null,
                 'children' => $sections->map(function($section){
                     return (object)[

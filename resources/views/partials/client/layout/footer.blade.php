@@ -11,7 +11,7 @@
         <div class="mt-8 flex flex-wrap justify-center  max-w-full">
             @foreach(app('nav')->footer() as $footer_el)
                 <div class="px-8 w-full md:w-1/2 lg:w-1/4 max-w-xs mb-8">
-                    <h5 class="font-bold mb-3 text-lg">
+                    <h5 class="font-bold text-lg {{$loop->first ? 'mb-3': ''}}">
                         @if ($footer_el->link)
                             <a href="{{ $footer_el->link }}">{{ $footer_el->name }}</a>
                         @else
