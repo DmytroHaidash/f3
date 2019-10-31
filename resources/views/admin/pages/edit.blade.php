@@ -64,7 +64,7 @@
 
                 <div class="col-lg-4">
                     <single-uploader name="cover"
-                                     src="{{ optional($page->getFirstMedia('cover'))->getFullUrl('thumb') }}"></single-uploader>
+                                     src="{{ optional($page->getFirstMedia('cover'))->getFullUrl() }}"></single-uploader>
                 </div>
             </div>
             @if($page->slug == 'book')
