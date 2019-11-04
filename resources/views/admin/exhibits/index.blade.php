@@ -16,7 +16,7 @@
         <table class="table">
             <thead class="small">
             <tr>
-                <th>Номер</th>
+                <th width="80">Номер</th>
                 <th width="65%">Название</th>
                 <th width="30%">Секция</th>
                 <th class="text-center">Порядок</th>
