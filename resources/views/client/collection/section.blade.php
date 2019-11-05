@@ -8,8 +8,6 @@
         <div class="container text-center">
             <h1 class="text-5xl leading-none  font-heading">
                 <span>{{ $section->title }}</span>
-
-                <div class="title-decoration inset-x-0 mx-auto w-40 h-16"></div>
             </h1>
 
             @if ($section->hasTranslation('description'))
@@ -20,7 +18,7 @@
         </div>
     </section>
 
-    <section class="my-12">
+    {{--<section class="my-12">
         <div class="exhibits {{ $exhibits->count() ? 'grid' : '' }}">
             @each('partials.client.exhibits.teaser', $exhibits, 'exhibit', 'partials.client.layout.not-found')
         </div>
@@ -30,7 +28,7 @@
                 {{ $exhibits->links() }}
             </div>
         @endif
-    </section>
+    </section>--}}
 
     @if ($section->hasTranslation('body'))
         <section class="my-12 container max-w-5xl">
