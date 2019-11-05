@@ -14,7 +14,7 @@
                         <div class="w-full flex justify-center my-2"
                              style="opacity: {{ 1.2 - $loop->iteration * 0.2 }}">
                             @foreach(range(0, rand(6, 12)) as $col)
-                                <div class="w-1 h-1 bg-{{ $section->color ? $section->color : $section->parent->color ? $section->parent->color:'green' }}-500 mx-1 rounded-full"></div>
+                                <div class="w-1 h-1 bg-yellow-500 mx-1 rounded-full"></div>
                             @endforeach
                         </div>
                     @endforeach
