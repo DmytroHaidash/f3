@@ -18,7 +18,7 @@
         </div>
     </section>
 
-    {{--<section class="my-12">
+    <section class="my-12">
         <div class="exhibits {{ $exhibits->count() ? 'grid' : '' }}">
             @each('partials.client.exhibits.teaser', $exhibits, 'exhibit', 'partials.client.layout.not-found')
         </div>
@@ -28,7 +28,7 @@
                 {{ $exhibits->links() }}
             </div>
         @endif
-    </section>--}}
+    </section>
 
     @if ($section->hasTranslation('body'))
         <section class="my-12 container max-w-5xl">
