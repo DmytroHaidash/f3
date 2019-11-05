@@ -9,15 +9,7 @@
             <h1 class="text-3xl leading-none mb-8 font-heading text-center">
                 <span>{{ __('nav.blog') }}</span>
 
-                <div class="title-decoration inset-x-0 mx-auto w-40">
-                    @foreach(range(1, 5) as $row)
-                        <div class="w-full flex justify-center my-2" style="opacity: {{ 1.2 - $loop->iteration * 0.2 }}">
-                            @foreach(range(0, rand(6, 12)) as $col)
-                                <div class="w-1 h-1 bg-purple-500 mx-1 rounded-full"></div>
-                            @endforeach
-                        </div>
-                    @endforeach
-                </div>
+                <div class="title-decoration inset-x-0 mx-auto w-40 h-16"></div>
             </h1>
 
             <div class="flex flex-wrap justify-center">
