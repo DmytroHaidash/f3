@@ -46,6 +46,6 @@ Route::group([
         ->where('page', '(about)');
     Route::get('book', 'PagesController@book')->name('book');
     Route::get('references', 'BlogController@references')->name('references');
-    Route::get('swordsmith', 'CollectionsController@swordsmith')->name('swordsmith');
+    Route::get('swordsmith/{section?}', 'CollectionsController@swordsmith')->name('swordsmith');
     Route::post('/order', 'PagesController@order')->name('order');
 });

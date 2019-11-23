@@ -67,19 +67,16 @@
                         </a>
 
                         @if (isset($nav->children) && count($nav->children))
-                            <svg width="12" height="11" class="fill-current ml-2 -mt-px">
-                                <use xlink:href="#caret"></use>
-                            </svg>
+                            <a href="{{ $nav->link ?? '#' }}" class="font-bold uppercase tracking-widest">
+                                <svg width="12" height="11" class="fill-current ml-2 -mt-px inline-flex">
+                                    <use xlink:href="#caret"></use>
+                                </svg>
+                            </a>
 
                             <div class="submenu leading-tight" style="display: none">
                                 <ul class="list-reset">
                                     @foreach($nav->children as $child)
-                                        @if (!$loop->first && $child->is_parent)
-                                            <li class="my-3">
-                                                <hr class="border-b border-white opacity-25">
-                                            </li>
-                                        @endif
-                                        <li class="my-1 {{ $child->is_parent ? 'font-bold' : '' }}">
+                                        <li class="my-1 font-bold">
                                             <a href="{{ $child->link }}">
                                                 {{ $child->name }}
                                             </a>

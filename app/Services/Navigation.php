@@ -31,7 +31,9 @@ class Navigation
 
     public function header()
     {
-
+        $sections = $this->exhibits->filter(function ($section) {
+            return !$section->parent_id;
+        });
         return [
             (object)[
                 'name' => __('nav.about'),
@@ -39,7 +41,14 @@ class Navigation
             ],
             (object)[
                 'name' => __('nav.collection'),
-                'link' => route('client.swordsmith')
+                'link' => null,
+                'children' => $sections->map(function($section){
+                    return (object)[
+                        'name' => $section->title,
+                        /*route('client.swordsmith')*/
+                        'link' => route('client.swordsmith', $section)
+                    ];
+                })->toArray()
             ],
 //            (object) [
 //                'name' => __('nav.publications'),
@@ -88,10 +97,10 @@ class Navigation
                         'name' => __('nav.blog'),
                         'link' => route('client.blog.index')
                     ],
-                    (object)[
+                    /*(object)[
                         'name' => __('nav.collection'),
                         'link' => route('client.swordsmith')
-                    ],
+                    ],*/
 
                     (object)[
                         'name' => __('nav.contacts'),

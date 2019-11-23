@@ -28,7 +28,7 @@
   }
 
   &__description {
-    @apply absolute inset-x-0 text-gray-300 font-serif italic leading-tight text-lg;
+    @apply absolute inset-x-0 text-white font-serif italic leading-tight text-lg;
     transform: translateY(400px);
     transition: 0.5s;
   }
@@ -40,6 +40,7 @@
 
     .teaser__description {
       transform: translateY(0);
+
     }
 
     .teaser__thumbnail {

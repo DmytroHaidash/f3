@@ -11,7 +11,7 @@
             </h1>
 
             @if ($section->hasTranslation('description'))
-                <p class="text-2xl font-serif italic max-w-3xl mx-auto mt-4">
+                <p class="text-2xl font-serif max-w-3xl mx-auto mt-4">
                     {!! $section->description !!}
                 </p>
             @endif

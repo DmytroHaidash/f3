@@ -16,7 +16,7 @@
 
   &:hover {
     .title span {
-      color: #fff;
+      @apply text-yellow-500;
     }
   }
 }

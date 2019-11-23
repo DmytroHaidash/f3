@@ -2,7 +2,7 @@
   //@apply flex justify-center;
 
   &-item {
-    @apply flex relative items-center z-0;
+    @apply relative items-center z-0;
 
     svg {
       transition: 0.5s;
@@ -27,9 +27,8 @@
   }
 
   .submenu {
-    @apply absolute w-48 -ml-24 text-sm bg-purple-900;
+    @apply w-48 text-sm relative w-full;
     top: 0;
-    left: 50%;
     padding-top: 30px;
     margin-top: -10px;
     z-index: -1;
