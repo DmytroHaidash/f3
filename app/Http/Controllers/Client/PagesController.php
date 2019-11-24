@@ -49,11 +49,13 @@ class PagesController extends Controller
         return \view('client.pages.discussions', compact('page', 'discussions'));
     }
 
-    public function discussinSend(Request $request)
+    public function discussionSend(Request $request)
     {
+
         $data = [
             'user' => (object)$request->only('name', 'contact'),
             'message' =>$request->input('message'),
+            'files'=>$request->input('files')
         ];
 
         Mail::send(new Discuss($data));

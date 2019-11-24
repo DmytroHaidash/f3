@@ -49,5 +49,5 @@ Route::group([
     Route::get('references', 'BlogController@references')->name('references');
     Route::get('swordsmith/{section?}', 'CollectionsController@swordsmith')->name('swordsmith');
     Route::post('/order', 'PagesController@order')->name('order');
-    Route::post('/discussion', "PagesController@discussinSend")->name('discussion');
+    Route::post('/discussion', "PagesController@discussionSend")->name('discussion');
 });

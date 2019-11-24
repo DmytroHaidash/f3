@@ -30,7 +30,7 @@ class Discuss extends Mailable
     public function build()
     {
         return $this
-            ->to('soshudenbook@gmail.com')
+            ->to('far4ik1991@gmail.com')
             ->subject('Предмет на обсуждение')
             ->view('mail.discuss');
     }
