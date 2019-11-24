@@ -6,7 +6,7 @@
 @endif
 @if($data->files)
     <p>Вложеные файлы:</p>
-    {{$date->files}}
+    {{$data->files}}
 @endif
 
 <br>
