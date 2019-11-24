@@ -13,7 +13,7 @@ Route::group([
     Route::resource('authors', 'AuthorsController')->except('show');
     Route::resource('sections', 'SectionsController')->except('show');
     Route::resource('exhibits', 'ExhibitsController')->except('show');
-
+    Route::resource('discussions', 'DiscussionsController')->except('show');
     Route::resource('posts', 'PostsController')->except('show');
     Route::resource('categories', 'CategoriesController')->except('show');
 

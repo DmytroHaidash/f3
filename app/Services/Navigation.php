@@ -63,6 +63,10 @@ class Navigation
                 'published' => $this->book->published
             ],
             (object)[
+                'name' => __('nav.discussions'),
+                'link' => route('client.discussions'),
+            ],
+            (object)[
                 'name' => __('nav.references'),
                 'link' => route('client.references')
             ],
@@ -169,6 +173,12 @@ class Navigation
                  'route' => 'authors',
                  'icon' => 'i-users',
              ]),*/
+            new Delimiter(),
+            new NavItem([
+                'name' => 'Предметы на обсуждении',
+                'route' => 'discussions',
+                'icon' => 'i-layers'
+            ]),
             new Delimiter(),
             new NavItem([
                 'name' => 'Пресс-центр',

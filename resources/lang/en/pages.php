@@ -30,5 +30,12 @@ return [
         'contact' => 'E-mail',
         'message' => 'Question?',
         'buy' => 'Buy',
-    ]
+    ],
+    'discussion' => [
+        'btn' => 'Send items to discussion',
+        'name' => 'Your name',
+        'contact' => 'E-mail',
+        'message' => 'Message',
+        'send' => 'Send'
+    ],
 ];

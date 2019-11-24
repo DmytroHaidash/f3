@@ -29,13 +29,19 @@
             </button>
         </div>
 
-        <div class="page-content mt-8 text-2xl">
-            {!! $description[0] !!}
-            {!! $description[1] !!}
-            <div class="page-content-item mb-4">
-                {!! $description[2] !!}
+        @if($description)
+            <div class="page-content mt-8 text-2xl">
+                {!! $description[0] !!}
+                @if(count($description)>=2)
+                    {!! $description[1] !!}
+                    @if(count($description)>=3)
+                        <div class="page-content-item mb-4">
+                            {!! $description[2] !!}
+                        </div>
+                    @endif
+                @endif
             </div>
-        </div>
+        @endif
         <div class="flex flex-wrap -mx-8  mb-4 justify-center">
             <a href="#" id="open-jobs-page-all" class="text-blue-200 text-3xl">More info</a>
         </div>

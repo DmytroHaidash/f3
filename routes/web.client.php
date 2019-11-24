@@ -45,7 +45,9 @@ Route::group([
     Route::get('{page}/{subpage?}', 'PagesController@show')
         ->where('page', '(about)');
     Route::get('book', 'PagesController@book')->name('book');
+    Route::get('discussions', 'PagesController@discussions')->name('discussions');
     Route::get('references', 'BlogController@references')->name('references');
     Route::get('swordsmith/{section?}', 'CollectionsController@swordsmith')->name('swordsmith');
     Route::post('/order', 'PagesController@order')->name('order');
+    Route::post('/discussion', "PagesController@discussinSend")->name('discussion');
 });

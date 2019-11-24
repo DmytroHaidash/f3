@@ -12,5 +12,6 @@ return [
     'previous' => 'Previous',
     'next' => 'Next',
     'book' => 'SŌSHŪ-DEN BOOK',
-    'references' =>'REFERENCES AND ARTICLES'
+    'references' =>'REFERENCES AND ARTICLES',
+    'discussions' => 'Discussion items',
 ];

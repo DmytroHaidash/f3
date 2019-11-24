@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers\Client;
 
+use App\Mail\Discuss;
 use App\Mail\Order;
+use App\Models\Discussion;
 use App\Models\Page;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
@@ -38,5 +40,24 @@ class PagesController extends Controller
         $page = Page::where('slug', 'book')->first();
         $description = explode('</p>', $page->body, '3' );
         return \view('client.pages.book', compact('page', 'description') );
+    }
+
+    public function discussions()
+    {
+        $page = Page::where('slug', 'discussion-items' )->first();
+        $discussions = Discussion::latest()->get();
+        return \view('client.pages.discussions', compact('page', 'discussions'));
+    }
+
+    public function discussinSend(Request $request)
+    {
+        $data = [
+            'user' => (object)$request->only('name', 'contact'),
+            'message' =>$request->input('message'),
+        ];
+
+        Mail::send(new Discuss($data));
+
+        return \redirect()->route('client.index');
     }
 }
