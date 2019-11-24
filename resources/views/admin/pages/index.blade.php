@@ -28,10 +28,10 @@
                            class="btn btn-warning btn-squire rounded-circle">
                             <i class="i-pencil"></i>
                         </a>
-                        <button class="btn btn-danger btn-squire rounded-circle"
+                        {{--<button class="btn btn-danger btn-squire rounded-circle"
                                 onclick="deleteItem('{{ route('admin.pages.destroy', $page) }}')">
                             <i class="i-trash"></i>
-                        </button>
+                        </button>--}}
                     </td>
                 </tr>
                 @if ($page->children->count())
