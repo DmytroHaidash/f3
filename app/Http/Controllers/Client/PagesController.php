@@ -51,7 +51,6 @@ class PagesController extends Controller
 
     public function discussionSend(Request $request)
     {
-
         $data = [
             'user' => (object)$request->only('name', 'contact'),
             'message' =>$request->input('message'),

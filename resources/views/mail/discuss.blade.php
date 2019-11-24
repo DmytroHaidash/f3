@@ -2,11 +2,13 @@
 <p>Имя:{{ $data->user->name }}</p>
 <p>email:{{ $data->user->contact }}</p>
 @if($data->message)
-    <p>Сообщение:{{ $date->message }}</p>
+    <p>Сообщение:{{ $data->message }}</p>
 @endif
 @if($data->files)
     <p>Вложеные файлы:</p>
-    {{$data->files}}
+    @foreach($data->files as $file)
+    {{$file}}
+    @endforeach
 @endif
 
 <br>
