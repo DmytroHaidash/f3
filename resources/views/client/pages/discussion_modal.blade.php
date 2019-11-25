@@ -7,7 +7,7 @@
     </div>
 
     <h5 class="text-2xl text-center mb-5">@lang('pages.discussion.btn') </h5>
-    <form action="{{route('client.discussion')}}" method="post">
+    <form action="{{route('client.discussion')}}" method="post" enctype="multipart/form-data">
         @csrf
 
         <div class="mb-5">
