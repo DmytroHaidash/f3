@@ -29,9 +29,15 @@ class Discuss extends Mailable
      */
     public function build()
     {
-        return $this
+        $email = $this
             ->to('far4ik1991@gmail.com')
             ->subject('Предмет на обсуждение')
             ->view('mail.discuss');
+        if($this->data->files){
+            foreach ($this->data->files as $file) {
+                $email->attach($file);
+            }
+        }
+        return $email;
     }
 }
