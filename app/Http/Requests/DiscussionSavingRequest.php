@@ -26,7 +26,7 @@ class DiscussionSavingRequest extends FormRequest
         return [
             'name' => 'required',
             'contact' => 'required',
-            'files' => 'file|mimes:jpg,jpeg,png,zip,rar,pdf,doc,odt,docx|max:2048'
+            'files' => 'file|mimes:jpg,jpeg,png,zip,rar,pdf,doc,odt,docx|max:5120'
         ];
     }
 }
