@@ -54,7 +54,7 @@ class PagesController extends Controller
         $data = [
             'user' => (object)$request->only('name', 'contact'),
             'message' =>$request->input('message'),
-            'files'=>$request->input('files')
+            'attach'=> $request['files'][0]? $request->input('files'): null
         ];
 
         Mail::send(new Discuss($data));
