@@ -101,6 +101,10 @@ class Navigation
                         'name' => __('nav.blog'),
                         'link' => route('client.blog.index')
                     ],
+                    (object)[
+                        'name' => __('nav.discussions'),
+                        'link' => route('client.discussions'),
+                    ],
                     /*(object)[
                         'name' => __('nav.collection'),
                         'link' => route('client.swordsmith')
