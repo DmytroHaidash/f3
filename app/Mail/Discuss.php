@@ -31,7 +31,7 @@ class Discuss extends Mailable
     {
         
         $email = $this
-            ->to('far4ik1991@gmail.com')
+            ->to(['soshudenbook@gmail.com', 'rivkin@rkmag.com'])
             ->subject('Предмет на обсуждение')
             ->view('mail.discuss');
         if ($this->data->attach) {
@@ -39,7 +39,6 @@ class Discuss extends Mailable
                 $email->attach($file);
             }
         }
-//        dd($email);
         return $email;
     }
 }

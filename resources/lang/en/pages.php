@@ -36,7 +36,7 @@ return [
         'name' => 'Your name',
         'contact' => 'E-mail',
         'message' => 'Message',
-        'send' => 'Send',
+        'send' => 'Submit',
         'file' => 'Add files'
     ],
 ];

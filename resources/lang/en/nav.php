@@ -13,5 +13,5 @@ return [
     'next' => 'Next',
     'book' => 'SŌSHŪ-DEN BOOK',
     'references' =>'REFERENCES AND ARTICLES',
-    'discussions' => 'Discussion items',
+    'discussions' => 'Nihonto for exhibit',
 ];
