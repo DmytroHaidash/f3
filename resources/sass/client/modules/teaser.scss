@@ -28,7 +28,7 @@
   }
 
   &__description {
-    @apply absolute inset-x-0 text-white font-serif italic leading-tight text-lg;
+    @apply absolute inset-x-0 text-white font-serif italic leading-tight;
     transform: translateY(400px);
     transition: 0.5s;
   }
