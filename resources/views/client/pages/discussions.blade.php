@@ -16,7 +16,7 @@
                 @lang('pages.discussion.btn')
             </button>
         </div>
-        @if($discussions->count() >1)
+        @if($discussions)
             <div class="flex flex-wrap justify-center ">
                 @foreach($discussions as $discuss)
                     <article class="teaser-wrapper w-full lg:w-1/3 mb-6">
