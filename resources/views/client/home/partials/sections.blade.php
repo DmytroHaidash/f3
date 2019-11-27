@@ -63,7 +63,7 @@
                                     </h4>
                                 </div>
                                 @if ($child->hasTranslation('description'))
-                                    <div class="teaser__description mt-3 px-6 lg:px-10">
+                                    <div class="teaser__description mt-3 px-6 lg:px-10 text-3xl">
                                         {{ Str::limit($child->description, 150) }}
                                     </div>
                                 @endif
