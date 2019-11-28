@@ -12,7 +12,7 @@
 
         <div class="mb-5">
             <label for="name" class="block font-bold uppercase text-xs mb-2">@lang('pages.discussion.name')</label>
-            <input type="text" class="form-control @error('name') border-red @enderror" id="name" name="name"
+            <input type="text" class="form-control text-black text-xl @error('name') border-red @enderror" id="name" name="name"
                    value="{{ old('name') }}" required>
             @error('name')
             <div class="text-red" role="alert">
@@ -23,7 +23,7 @@
 
         <div class="mb-5">
             <label for="contact" class="block font-bold uppercase text-xs mb-2">@lang('pages.discussion.contact')</label>
-            <input type="text" class="form-control @error('contact') border-red @enderror" id="contact" name="contact"
+            <input type="text" class="form-control text-black text-xl @error('contact') border-red @enderror" id="contact" name="contact"
                    value="{{ old('contact') }}" required>
             @error('contact')
             <div class="text-red" role="alert">
@@ -33,7 +33,7 @@
         </div>
         <div class="mb-5">
             <label for="message" class="block font-bold uppercase text-xs mb-2">@lang('pages.discussion.message')</label>
-            <textarea class="form-control border" id="message"
+            <textarea class="form-control border text-black text-xl" id="message"
                       name="message">{{ old('message') }}</textarea>
         </div>
         <div class="mb-5">

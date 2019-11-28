@@ -12,7 +12,7 @@
 
         <div class="mb-5">
             <label for="name" class="block font-bold uppercase text-xs mb-2">@lang('pages.book.name')</label>
-            <input type="text" class="form-control @error('name') border-red @enderror" id="name" name="name"
+            <input type="text" class="form-control text-black text-xl @error('name') border-red @enderror" id="name" name="name"
                    value="{{ old('name') }}" required>
             @error('name')
             <div class="text-red" role="alert">
@@ -23,7 +23,7 @@
 
         <div class="mb-5">
             <label for="contact" class="block font-bold uppercase text-xs mb-2">@lang('pages.book.contact')</label>
-            <input type="text" class="form-control @error('contact') border-red @enderror" id="contact" name="contact"
+            <input type="text" class="form-control text-black text-xl @error('contact') border-red @enderror" id="contact" name="contact"
                    value="{{ old('contact') }}" required>
             @error('contact')
             <div class="text-red" role="alert">
