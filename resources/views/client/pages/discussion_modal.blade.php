@@ -37,9 +37,10 @@
                       name="message">{{ old('message') }}</textarea>
         </div>
         <div class="mb-5">
-            <label for="file" class="block font-bold uppercase text-xs mb-2">@lang('pages.discussion.file')</label>
+           {{-- <label for="file" class="block font-bold uppercase text-xs mb-2">@lang('pages.discussion.file')</label>
             <input type="file" name="files[]" id="file" accept=".jpg, .jpeg, .png, .zip, .rar, .pdf, .doc, .docx, .odt, .pages" multiple>
-            <span class="block text-sm text-muted">(jpg,jpeg,png,zip,rar,pdf,doc,docx,odt,pages) max-5Mb</span>
+            <span class="block text-sm text-muted">(jpg,jpeg,png,zip,rar,pdf,doc,docx,odt,pages) max-5Mb</span>--}}
+            <file-uploader></file-uploader>
         </div>
 
         <button class="button button--primary">@lang('pages.discussion.send')</button>

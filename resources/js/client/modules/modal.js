@@ -2,7 +2,6 @@ $('.modal-btn').on('click', function (e) {
   e.preventDefault();
 
   let modalId = $(this).data('modal-open');
-console.log(modalId);
   $(`#${modalId}`).toggle();
   $('.custom-modal-mask').toggle();
 });

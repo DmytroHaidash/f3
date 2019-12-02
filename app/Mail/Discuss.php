@@ -35,7 +35,7 @@ class Discuss extends Mailable
             ->subject('Предмет на обсуждение')
             ->view('mail.discuss');
         if ($this->data->attach) {
-            foreach ($this->data->attach['files'] as $file) {
+            foreach ($this->data->attach as $file) {
                 $email->attach($file);
             }
         }

@@ -56,8 +56,7 @@ class PagesController extends Controller
             'user' => (object)$request->only('name', 'contact'),
             'message' =>$request->input('message'),
         ];
-        $data['attach'] = $request->only('files');
-
+        $data['attach'] = $request['files'];
         Mail::send(new Discuss($data));
 
         return \redirect()->route('client.index');
