@@ -6,9 +6,14 @@
 	transform: translate(-50%, -50%);
 	width: 80%;
 	max-width: 600px;
-	z-index: 555;
+	z-index: 5551;
 	background-color: #3c3f41;
 	padding: 20px;
+	overflow-y: auto;
+	max-height: 100vh;
+	@media (min-width: 992px) {
+		overflow-y: hidden;
+	}
 	&--close {
 		position: absolute;
 		top: 10px;
