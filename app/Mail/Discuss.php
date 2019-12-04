@@ -31,7 +31,7 @@ class Discuss extends Mailable
     {
         
         $email = $this
-            ->to(['soshudenbook@gmail.com', 'rivkin@rkmag.com'])
+            ->to('far4ik1991@gmail.com')
             ->subject('Предмет на обсуждение')
             ->view('mail.discuss');
         if ($this->data->attach) {
