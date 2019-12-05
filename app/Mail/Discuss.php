@@ -36,7 +36,11 @@ class Discuss extends Mailable
 
         if ($this->data->attach) {
             foreach ($this->data->attach as $file) {
-                $email->attachData($file->getRealPath(), $file->getClientOriginalName(), ['mime' => $file->getMimeType()]);
+                $email->attach($file->getRealPath(), [
+                    'as' => $file->getClientOriginalName(),
+                    'mime' => $file->getMimeType(),
+                ]);
+                /*$email->attachData($file->getRealPath(), $file->getClientOriginalName(), ['mime' => $file->getMimeType()]);*/
             }
         }
 
