@@ -33,10 +33,8 @@
         this.$refs.myFiles.files = dt.files;
       },
       remove(index) {
-        const dt = new DataTransfer();
         this.files.splice(index, 1);
-        this.files.forEach(file => dt.items.add(file));
-        this.$refs.myFiles.files = dt.files;
+        this.$refs.myFiles.files.splice(index, 1);
       }
     }
   }

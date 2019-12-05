@@ -36,7 +36,7 @@ class Discuss extends Mailable
             ->view('mail.discuss');
         if ($this->data->attach) {
             foreach ($this->data->attach as $file) {
-                $email->attach($file);
+                $email->attachData($file, $file->getClientOriginalName(), ['mime' => $file->getMimeType()]);
             }
         }
         return $email;
