@@ -32,7 +32,7 @@ return [
         'buy' => 'Buy',
     ],
     'discussion' => [
-        'btn' => 'Send item to publication',
+        'btn' => 'Send item for publication',
         'name' => 'Your name',
         'contact' => 'E-mail',
         'message' => 'Message',
