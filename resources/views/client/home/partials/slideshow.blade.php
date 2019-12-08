@@ -1,5 +1,5 @@
 <section class="slideshow">
-    <div class="max-w-lg text-white z-30" id="intro" style="display: none">
+    {{--<div class="max-w-lg text-white z-30" id="intro" style="display: none">
         <img src="{{ asset('images/img.jpg') }}" alt="">
 
         <a href="{{ url('/book') }}">
@@ -10,7 +10,7 @@
         <svg width="20" height="20" fill="#fff" class="close cursor-pointer absolute top-0 right-0 m-4">
             <use xlink:href="#close"></use>
         </svg>
-    </div>
+    </div>--}}
 
     <div class="slides slides--images">
         <div class="slide slide--current">
