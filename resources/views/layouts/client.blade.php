@@ -10,6 +10,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="32-32.png">
     <link rel="stylesheet" href="{{ asset('css/client.css') }}">
     @stack('styles')
+    @yield('meta')
 </head>
 <body class="overflow-x-hidden">
 @include('partials.client.layout.icons')

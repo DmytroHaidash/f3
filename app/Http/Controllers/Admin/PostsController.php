@@ -62,6 +62,16 @@ class PostsController extends Controller
                 ->toMediaCollection('cover');
         }
 
+        if($request->has('meta')){
+            foreach ($request->get('meta') as $key => $meta) {
+                $post->meta()->updateOrCreate([
+                    'metable_id' => $post->id
+                ], [
+                    $key => $meta
+                ]);
+            }
+        }
+
         return redirect()->route('admin.posts.edit', $post)->with('message', 'Запись успешно создана.');
     }
 
@@ -100,6 +110,15 @@ class PostsController extends Controller
                 ->toMediaCollection('cover');
         }
 
+        if($request->has('meta')){
+            foreach ($request->get('meta') as $key => $meta) {
+                $post->meta()->updateOrCreate([
+                    'metable_id' => $post->id
+                ], [
+                    $key => $meta
+                ]);
+            }
+        }
         return redirect()->route('admin.posts.edit', $post)->with('message', 'Запись успешно обновлена.');
     }
 
