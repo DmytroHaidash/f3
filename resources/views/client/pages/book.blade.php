@@ -241,3 +241,7 @@
 @push('scripts')
     <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 @endpush
+
+@section('meta')
+    @includeIf('partials.app.layout.meta', ['meta' => $page->meta()->first()])
+@endsection
