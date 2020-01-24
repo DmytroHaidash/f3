@@ -2,7 +2,8 @@
     <div>
         <input type="file" id="file" ref="myFiles" name="files[]"
                accept=".jpg, .jpeg, .png, .zip, .rar, .pdf, .doc, .docx, .odt, .pages"
-               @change="handle" multiple>
+               @change="handle" multiple
+               :required="required">
         <span class="block text-sm text-muted">(jpg, jpeg, png, zip, rar, pdf, doc, docx, odt, pages) max-5Mb</span>
         <div v-if="files.length" class="mt-4">
             <div  v-for="(file, index) in files" :key="index" class="flex justify-between mb-3 pb-2 border-b border-gray-200 border-solid">
@@ -16,6 +17,7 @@
 </template>
 <script>
   export default {
+    props: ['required'],
     data() {
       return {
         files: [],
