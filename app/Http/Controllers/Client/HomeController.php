@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Client;
 
+use App\Models\Page;
 use App\Models\Post;
 use App\Models\Section;
 use Illuminate\Contracts\View\View;
@@ -16,7 +17,8 @@ class HomeController extends Controller
         $sections = app('sections')->filter(function ($section) {
             return is_null($section->parent_id);
         });
+        $meta = Page::where('slug', 'about')->first()->meta()->first();
 
-        return view('client.home.index', compact('posts', 'sections'));
+        return view('client.home.index', compact('posts', 'sections', 'meta'));
     }
 }

@@ -27,10 +27,10 @@
 
 @endsection
 @section('meta')
-    @includeIf('partials.app.layout.meta', ['meta' => $sections->meta()->first()])
+    @includeIf('partials.client.layout.meta', ['meta' => $sections->meta()->first()])
     @if ($sections->children->count())
         @foreach($sections->children as $child)
-            @includeIf('partials.app.layout.meta', ['meta' => $child->meta()->first()])
+            @includeIf('partials.client.layout.meta', ['meta' => $child->meta()->first()])
         @endforeach
     @endif
 @endsection

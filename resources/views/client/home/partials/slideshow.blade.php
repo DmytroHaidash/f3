@@ -25,7 +25,7 @@
         </div>
         <div class="slide">
             <figure class="slide__img" style="background-image: url({{ asset('images/img.jpg') }});"></figure>
-            <h2 class="slide__title font-heading">{{ __('nav.book') }}</h2>
+            <h1 class="slide__title font-heading">{{ __('nav.book') }}</h1>
             <div class="slide__desc" hidden></div>
             <div class="slide__link">
                 <a href="{{ route('client.book') }}" class="button button--primary">
