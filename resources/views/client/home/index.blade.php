@@ -12,7 +12,4 @@
     @if($meta)
         @includeIf('partials.client.layout.meta', ['meta' =>$meta])
     @endif
-    @foreach($sections as $section)
-        @includeIf('partials.client.layout.meta', ['meta' => $section->meta()->first()])
-    @endforeach
 @endsection
