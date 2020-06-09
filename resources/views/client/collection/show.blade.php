@@ -31,6 +31,13 @@
                 </a>
             </p>
         @endforeach
+        @if($exhibit->video)
+            <div class="flex flex-wrap -mx-8 mt-12 justify-center">
+                <div class="w-full mb-4  mt-4">
+                    <div class="video-feedback" data-youtube="{{$exhibit->video}}"></div>
+                </div>
+            </div>
+        @endif
     </section>
 
     <section class="page-content">

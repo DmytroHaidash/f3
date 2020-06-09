@@ -82,7 +82,8 @@ class Exhibit extends Model implements HasMedia, Sortable
         'body',
         'props',
         'author_id',
-        'sort_order'
+        'sort_order',
+        'video',
     ];
 
 

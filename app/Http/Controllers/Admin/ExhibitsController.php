@@ -45,7 +45,7 @@ class ExhibitsController extends Controller
      */
     public function store(ExhibitSavingRequest $request): RedirectResponse
     {
-        $exhibit = new Exhibit($request->only('author_id', 'props'));
+        $exhibit = new Exhibit($request->only('author_id', 'props', 'video'));
         $exhibit->makeTranslation(['title', 'body', 'props'])->save();
         $exhibit->sections()->attach($request->input('section_id'));
 
@@ -82,7 +82,7 @@ class ExhibitsController extends Controller
      */
     public function update(ExhibitSavingRequest $request, Exhibit $exhibit): RedirectResponse
     {
-        $exhibit->fill($request->only('author_id', 'props'));
+        $exhibit->fill($request->only('author_id', 'props', 'video'));
         $exhibit->makeTranslation(['title', 'body', 'props'])->save();
         $exhibit->sections()->sync($request->input('section_id'));
 

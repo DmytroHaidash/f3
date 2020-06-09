@@ -39,6 +39,12 @@
                             </fieldset>
 
                         @endforeach
+                            <div class="form-group">
+                                <label for="video" class="mt-2">Видео</label>
+                                <input id="video" type="text" name="video"
+                                       class="form-control"
+                                       value="{{ old('video') ?? $exhibit->video }}">
+                            </div>
                     </block-editor>
                     @includeIf('partials.admin.meta', ['meta' => $exhibit->meta()->first()])
                 </div>
