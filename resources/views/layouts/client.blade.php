@@ -13,6 +13,16 @@
     <link rel="stylesheet" href="{{ asset('css/client.css') }}">
     @stack('styles')
     @yield('meta')
+<!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-168424489-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-168424489-1');
+    </script>
+
 </head>
 <body class="overflow-x-hidden">
 @include('partials.client.layout.icons')
