@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
+    <meta name="google-site-verification" content="c-yhVNvR7-1j-BkOx37GVPtqjS_e91gojjxAouN2aQA" />
+
     <title>{!! config('app.name', 'Impression Admin') . (isset($page_title) ? ' | ' . $page_title : '') !!}</title>
     <link rel="apple-touch-icon" sizes="180x180" href="256-256.png">
     <link rel="icon" type="image/png" sizes="32x32" href="32-32.png">
